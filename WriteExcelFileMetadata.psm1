@@ -48,7 +48,7 @@ function Write-ExcelFileMetadata {
         [Boolean] $IncludesSubdir = $False,
 
         [Parameter(Position = 3)]
-        [String] $OutFilePath = (Join-Path -Path $SourcePath -ChildPath ".metadata.json"),
+        [String] $OutFilePath,
 
         [Parameter(Position = 4)]
         [String] $OutFileEncoding = "utf8"
@@ -64,17 +64,41 @@ function Write-ExcelFileMetadata {
         }
 
         $fileList = [List[PSObject]]::new()
+        Function Convert-OOXmlPropsToPSObj ([OfficeOpenXml.OfficeProperties] $x) {
+            return [PSCustomObject]@{
+                Application = $x.Application
+                Title = $x.Title
+                Subject = $x.Subject
+                Author = $x.Author
+                Comments = $x.Comments
+                Keywords = $x.Keywords
+                LastModifiedBy = $x.LastModifiedBy
+                # LastPrinted = $x.LastPrinted.ToString("yyyy/MM/dd HH:mm:ss")
+                Created = $x.Created.ToString("yyyy-MM-ddTHH:mm:ss.fffK") # ISO 8601
+                Category = $x.Category
+                Status = $x.Status
+                AppVersion = $x.AppVersion
+                Company = $x.Company
+                Manager = $x.Manager
+                Modified = $x.Modified.ToString("yyyy-MM-ddTHH:mm:ss.fffK")
+            }
+        }
 
         # SourcePath is a directory
         if ((Get-Item -LiteralPath $SourcePath).PSIsContainer) {
+            # Set the path of output JSON file
+            if([String]::IsNullOrEmpty($OutFilePath)) {
+                $OutFilePath = Join-Path -Path $SourcePath -ChildPath ".metadata.json"
+            }
+
             [String] $childPath = Join-Path -Path $SourcePath -ChildPath $FilteredName
 
             foreach ($f in Get-ChildItem $childPath) {
                 try {
                     # dfinke/ImportExcel: PowerShell module to import/export Excel spreadsheets, without Excel
                     # https://github.com/dfinke/ImportExcel
-                    $info = Get-ExcelWorkbookInfo -Path "$($f.FullName)"
-                    $fileList.Add($info)
+                    [OfficeOpenXml.OfficeProperties] $info = Get-ExcelWorkbookInfo -Path "$($f.FullName)"
+                    $fileList.Add((Convert-OOXmlPropsToPSObj $info))
                 }
                 catch {
                     # If the Excel file is open when an error will occur. -> Failed retrieving Excel workbook information
@@ -84,9 +108,14 @@ function Write-ExcelFileMetadata {
         }
         # SourcePath is not a directory
         elseif (Test-Path -LiteralPath $SourcePath) {
+            # Set the path of output JSON file
+            if([String]::IsNullOrEmpty($OutFilePath)) {
+                $OutFilePath = Join-Path -Path (Get-Item $SourcePath).DirectoryName -ChildPath ".metadata.json"
+            }
+
             try {
-                $info = Get-ExcelWorkbookInfo -Path "$($SourcePath)"
-                $fileList.Add($info)
+                [OfficeOpenXml.OfficeProperties] $info = Get-ExcelWorkbookInfo -Path "$($SourcePath)"
+                $fileList.Add((Convert-OOXmlPropsToPSObj $info))
             }
             catch {
                 Write-Error $_
@@ -97,16 +126,11 @@ function Write-ExcelFileMetadata {
             exit 1
         }
 
-        $info
-        return
-
         # Write the metadata in the JSON file
         Write-Host "[info] The path of output JSON file is `"$($OutFilePath)`""
 
         try {
-            Write-Host "[info] $($evLogStr)"
-
-            $evLogStr | Out-File -LiteralPath $qFilePath -Append -Encoding $enc
+            ConvertTo-Json -InputObject $fileList | Out-File -LiteralPath $OutFilePath -Encoding $OutFileEncoding
         }
         catch {
             Write-Host "[error] $($_.Exception.Message)"

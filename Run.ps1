@@ -12,7 +12,7 @@ Param(
     [Boolean] $IncludesSubdir = $False,
 
     [Parameter(Position = 3)]
-    [String] $OutFilePath = (Join-Path -Path $SourcePath -ChildPath ".metadata.json"),
+    [String] $OutFilePath,
 
     [Parameter(Position = 4)]
     [String] $OutFileEncoding = "utf8"
