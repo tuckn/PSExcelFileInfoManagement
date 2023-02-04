@@ -1,0 +1,149 @@
+﻿[
+    {
+        "Id":  "773f8c61-5956-44b6-817d-d64935ce8590",
+        "FilePath":  ".\\SubFolder\\FIXME_CanNotReadExcelInfo_Project issue tracker1.xlsx",
+        "ExcelInfo":  {
+
+                      }
+    },
+    {
+        "Id":  "6496a7fb-03d1-4512-a01a-ea21f2ce348e",
+        "FilePath":  ".\\SubFolder\\Video Game Tracker1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Video Game Tracker",
+                          "Author":  "Tuckn",
+                          "Comments":  "",
+                          "Category":  "",
+                          "Keywords":  "Tags: video game;",
+                          "Modified":  "2023-01-30T07:58:54.000+09:00",
+                          "Created":  "2018-01-10T15:05:32.000+09:00",
+                          "LastModifiedBy":  "Tuckn",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "54979bfb-7807-4af9-8bb3-79f0a89ddf4c",
+        "FilePath":  ".\\Employee absence schedule1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Employee Absence Schedule",
+                          "Author":  "Tuckn",
+                          "Comments":  "",
+                          "Category":  "",
+                          "Keywords":  "Tags: employee;schedule",
+                          "Modified":  "2023-01-30T07:54:31.000+09:00",
+                          "Created":  "2016-12-06T13:52:27.000+09:00",
+                          "LastModifiedBy":  "Tuckn",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "70d73118-a059-44c4-bcf8-1a01d712f333",
+        "FilePath":  ".\\Inventory list with highlighting1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn WriteExcelFileMetadata",
+                          "Subject":  "Subject: Inventory list with highlighting",
+                          "Author":  "",
+                          "Comments":  "",
+                          "Category":  "",
+                          "Keywords":  "Tags: inventory;list",
+                          "Modified":  "2023-01-30T07:52:05.000+09:00",
+                          "Created":  "2018-08-17T05:38:17.000+09:00",
+                          "LastModifiedBy":  "",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "7856a3f5-7ca0-4369-b43c-307c3fe72bd5",
+        "FilePath":  ".\\Milestone and task project timeline1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Milestone and task project timeline1",
+                          "Author":  "",
+                          "Comments":  "",
+                          "Category":  "CategoryB",
+                          "Keywords":  "Tags: project;milestone;task",
+                          "Modified":  "2023-01-30T07:47:03.000+09:00",
+                          "Created":  "2021-10-13T02:49:37.000+09:00",
+                          "LastModifiedBy":  "",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "2d9fe5dc-1786-4575-a366-d6b62b0674f8",
+        "FilePath":  ".\\Simple Gantt Chart1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Simple Gantt Chart",
+                          "Author":  "",
+                          "Comments":  "",
+                          "Category":  "CategoryA;CategoryB",
+                          "Keywords":  "Tags: project;gantt;chart",
+                          "Modified":  "2023-01-30T07:43:49.000+09:00",
+                          "Created":  "2022-03-12T07:40:12.000+09:00",
+                          "LastModifiedBy":  "",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "7080deb9-140e-4205-a043-5f187519a21e",
+        "FilePath":  ".\\Time sheet (weekly)1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Time Sheet (weekly)",
+                          "Author":  "Tuckn",
+                          "Comments":  "",
+                          "Category":  "",
+                          "Keywords":  "",
+                          "Modified":  "2023-01-30T07:48:45.000+09:00",
+                          "Created":  "2017-02-03T16:21:43.000+09:00",
+                          "LastModifiedBy":  "Tuckn",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    },
+    {
+        "Id":  "497168dc-d415-4803-8039-cf7f4fd2b364",
+        "FilePath":  "..\\SubFolder\\Book1.xlsx",
+        "ExcelInfo":  {
+                          "Title":  "Title: Tuckn ExcelFileInfoManagement",
+                          "Subject":  "Subject: Time Sheet (weekly)",
+                          "Author":  "Tuckn",
+                          "Comments":  "",
+                          "Category":  "",
+                          "Keywords":  "",
+                          "Modified":  "2023-01-30T07:48:45.000+09:00",
+                          "Created":  "2017-02-03T16:21:43.000+09:00",
+                          "LastModifiedBy":  "Tuckn",
+                          "Company":  "",
+                          "Manager":  "",
+                          "Status":  "",
+                          "Application":  "Microsoft Excel",
+                          "AppVersion":  "16.0300"
+                      }
+    }
+]
